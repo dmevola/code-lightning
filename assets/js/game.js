@@ -1,7 +1,8 @@
 const question = document.querySelector('#question');
 const choices = Array.from(document.querySelectorAll('.choice-text'));
-const question = document.querySelector('#progressText');
-const question = document.querySelector('#score');
+const progressText = document.querySelector('#progressText');
+const scoreText= document.querySelector('#score');
+const progressBarFull = document.querySelector('#progressBarFull');
 
 let currentQuestion = {}
 let acceptingAnswers = true
@@ -11,45 +12,45 @@ let availableQuestions = []
 
 let questions = [
     {
-        question: 'Common Data Types DO NOT include',
+        question: 'Common Data Types DO NOT include:',
         choice1: 'Strings',
         choice2: 'Booleans',
         choice3: 'Alerts',
         choice4: 'Numbers',
-        answer: Alerts,
+        answer: 3,
     },
     {
-        question: 'Common Data Types DO NOT include',
-        choice1: 'Strings',
-        choice2: 'Booleans',
-        choice3: 'Alerts',
-        choice4: 'Numbers',
-        answer: Alerts,
+        question: 'An if/else statement is enclosed within the following:',
+        choice1: 'Quotes',
+        choice2: 'Curly Brackets',
+        choice3: 'Parenthesis',
+        choice4: 'Square Brackets',
+        answer: 3,
     },
     {
-        question: 'Common Data Types DO NOT include',
-        choice1: 'Strings',
-        choice2: 'Booleans',
-        choice3: 'Alerts',
-        choice4: 'Numbers',
-        answer: Alerts,
+        question: 'Arrays in JavaScript can be used to store:',
+        choice1: 'Numbers and Strings',
+        choice2: 'Other Arrays',
+        choice3: 'Booleans',
+        choice4: 'All of the Above',
+        answer: 4,
     },
     {
-        question: 'Common Data Types DO NOT include',
-        choice1: 'Strings',
-        choice2: 'Booleans',
-        choice3: 'Alerts',
-        choice4: 'Numbers',
-        answer: Alerts,
+        question: 'Which of the following methods is preferred when injecting text with JavaScript?',
+        choice1: 'textContent',
+        choice2: 'innerHtml',
+        choice3: 'Both',
+        choice4: 'Neither',
+        answer: 1,
     },
     {
-        question: 'Common Data Types DO NOT include',
-        choice1: 'Strings',
-        choice2: 'Booleans',
-        choice3: 'Alerts',
-        choice4: 'Numbers',
-        answer: Alerts,
-    },
+        question: 'Which of these is a useful tool to debug?',
+        choice1: 'JavaScript',
+        choice2: 'Bootstrap',
+        choice3: 'console.log',
+        choice4: 'methods',
+        answer: 3,
+    }
 ]
 
 const SCORE_POINTS = 100
