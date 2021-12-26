@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./assets/css/style.css" >
+    <title>Code Lightning! Game Over</title>
+</head>
+<body>
+    <div class="container min-vh-100 align-items-center justify-content-center">
+        <div class="row">
+        <div id="end" class="col-10 col-md-6 col-lg-5 justify-content-center align-items-center">
+            <h1 id="finalScore">
+                0
+            </h1>
+            <form class="end-form-container">
+            <h2 id="end-text m-2">
+                Enter your name below to save your score!
+            </h2>
+            <input type="text" name="name" id="username" placeholder="Enter your name">
+            <button class="btn btn-primary m-1" id="saveScoreBtn" type="submit" onClick="saveHighScore(event)" disabled>Save</button>
+        </form>
+        <a href="./game.html" class="btn btn-secondary m-1">Play Again</a>
+        <a href="./index.html" class="btn btn-light m-1">Go Home</a>
+        </div>
+    </div>
+</div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>    
+    <script src="./assets/js/end.js"></script>    
+</body>
+</html>

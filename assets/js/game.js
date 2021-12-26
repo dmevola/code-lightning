@@ -17,7 +17,6 @@ var interval = setInterval(function(){
     }
 }, 1000);
 
-
 let currentQuestion = {}
 let acceptingAnswers = true
 let score = 0
