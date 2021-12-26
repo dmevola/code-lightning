@@ -9,9 +9,9 @@ var interval = setInterval(function(){
     document.getElementById('timer').innerText="Time left: " + timer;
     timer--;
     if (timer === 0) {
-        clearInterval(interval);
         document.getElementById('timer').innerText='Time Up';
         alert("You're out of time! Let's see how you did.");
+        clearInterval(interval);
         localStorage.setItem('mostRecentScore', score)
         return window.location.assign('./end.html')    
     }
@@ -80,11 +80,12 @@ startGame = () => {
 
 getNewQuestion = () => {
     if(availableQuestions.length === 0 || questionCounter > MAX_QUESTIONS){
+        alert("That was fast! Let's see how you did")
         localStorage.setItem('mostRecentScore', score)
         return window.location.assign('./end.html')
     }
     questionCounter++
-    progressText.innerText = 'Question ${questionCounter} of ${MAX_QUESTIONS}';
+    progressText.innerText = `Question ${questionCounter} of ${MAX_QUESTIONS}`;
 
     const questionsIndex = Math.floor(Math.random() * availableQuestions.length)
     currentQuestion = availableQuestions[questionsIndex]
@@ -113,6 +114,10 @@ choices.forEach(choice => {
         if(classToApply === 'correct') {
             incrementScore(SCORE_POINTS)
         }
+        else ( 
+            timer -= 10
+        )
+
         selectedChoice.parentElement.classList.add(classToApply)
 
         setTimeout(() => {
@@ -122,6 +127,8 @@ choices.forEach(choice => {
 
     })
 })
+
+// subtractTime = timer -= 10;
 
 incrementScore = num => {
     score +=num
