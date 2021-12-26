@@ -4,6 +4,21 @@ const progressText = document.querySelector('#progressText');
 const scoreText= document.querySelector('#score');
 const progressBarFull = document.querySelector('#progressBarFull');
 
+var timer = 60;
+var interval = setInterval(function(){
+    document.getElementById('timer').innerText="Time left: " + timer;
+    timer--;
+    if (timer === 0) {
+        clearInterval(interval);
+        document.getElementById('timer').innerText='Time Up';
+        alert("You're out of time! Let's see how you did.");
+        localStorage.setItem('mostRecentScore', score)
+        return window.location.assign('./end.html')    
+    }
+}, 1000);
+
+console.log(timer);
+
 let currentQuestion = {}
 let acceptingAnswers = true
 let score = 0
@@ -66,10 +81,10 @@ startGame = () => {
 getNewQuestion = () => {
     if(availableQuestions.length === 0 || questionCounter > MAX_QUESTIONS){
         localStorage.setItem('mostRecentScore', score)
-        return window.location.assign('/end.html')
+        return window.location.assign('./end.html')
     }
     questionCounter++
-    progressText.innerText = 'Question ${questionCounter} of ${MAX_QUESTIONS}'
+    progressText.innerText = 'Question ${questionCounter} of ${MAX_QUESTIONS}';
 
     const questionsIndex = Math.floor(Math.random() * availableQuestions.length)
     currentQuestion = availableQuestions[questionsIndex]
