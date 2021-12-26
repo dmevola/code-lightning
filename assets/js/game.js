@@ -17,7 +17,6 @@ var interval = setInterval(function(){
     }
 }, 1000);
 
-console.log(timer);
 
 let currentQuestion = {}
 let acceptingAnswers = true
