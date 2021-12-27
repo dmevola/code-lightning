@@ -4,11 +4,13 @@ const progressText = document.querySelector('#progressText');
 const scoreText= document.querySelector('#score');
 const progressBarFull = document.querySelector('#progressBarFull');
 
+//timer functions
+
 var timer = 60;
 var interval = setInterval(function(){
     document.getElementById('timer').innerText="Time left: " + timer;
     timer--;
-    if (timer === 0) {
+    if (timer <= 0) {
         clearInterval(interval);
         document.getElementById('timer').innerText='Time Up';
         alert("You're out of time! Let's see how you did.");

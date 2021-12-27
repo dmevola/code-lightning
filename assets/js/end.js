@@ -5,14 +5,17 @@ const mostRecentScore = localStorage.getItem('mostRecentScore')
 
 const highScores = JSON.parse(localStorage.getItem('highScores')) || []
 
+// most high scores that can be shown on leader board
 const MAX_HI_SCORES = 5
 
-finalScore.innerText = 'Your Score ' + mostRecentScore
+//showing score on end game
+finalScore.innerText = 'Your Score: ' + mostRecentScore
 
 username.addEventListener('keyup', () => {
     saveScoreBtn.disabled = !username.value
 })
 
+//function to pass forward current high score
 saveHighScore = e => {
     e.preventDefault()
 
