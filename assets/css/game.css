@@ -4,11 +4,49 @@ body {
 
 .choice-container {
 display: flex;
-flex: auto;
-flex-wrap: wrap;
-justify-content: space-between;
-border: 2px solid black;
+margin-bottom: 0.8rem;
+width: 100%;
 border-radius: 4px;
-padding: 5px;
-margin: 10px;
+}
+
+.choice-prefix {
+    padding: 2rem 2.5rem;
+}
+
+.choice-text {
+    padding: 2rem;
+    width: 100%;
+}
+
+.correct {
+    background: linear-gradient(32deg, rgba(11, 223, 36) 0%, rgba(41, 232, 111) 100%);
+}
+
+
+.incorrect {
+    background: linear-gradient(32deg, rgba(230, 29, 29, 1) 0%, rgba(224, 11, 11, 1) 100%);
+}
+
+.hud {
+    display: flex;
+    justify-content: space-between;
+    margin: 30px;
+}
+
+.hud-prefix {
+    text-align: center;
+    font-size: 2rem;
+}
+
+.hud-main-text {
+    text-align: center;
+}
+
+#timer {
+    font-size: 3rem;
+    background: darkblue;
+    color: white;
+    text-align: end;
+    border-radius: 15px;
+    padding: 0.8rem;
 }
