@@ -1,6 +1,7 @@
 body {
     color: black;
 }
+/* styling list */
 
 #highScoresList {
     list-style: none;
