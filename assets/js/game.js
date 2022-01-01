@@ -24,7 +24,7 @@ let acceptingAnswers = true
 let score = 0
 let questionCounter = 0
 let availableQuestions = []
-
+// array of questions and correct answers
 let questions = [
     {
         question: 'Common Data Types DO NOT include:',
